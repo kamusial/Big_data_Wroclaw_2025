@@ -31,6 +31,7 @@ df = pd.get_dummies(df)
 del (df['Gender_Male'])
 df = df.rename(columns={'Gender_Female': 'Gender'})
 print(df)
+
 df.to_csv('waga_wzrost_po_edycji.csv')
 
 
