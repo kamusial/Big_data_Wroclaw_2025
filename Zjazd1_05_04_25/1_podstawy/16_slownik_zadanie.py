@@ -68,4 +68,4 @@ ceny_dino = {
 }
 
 zakupy = {'kurczak': 4, 'jajka': 2, 'ogórki': 12, 'kawa': 4}
-# program liczy i zwraca informację, gdzie najtaniej
+# program liczy i zwraca informację, gdzie najtaniej zrobić konkretne zakupy
