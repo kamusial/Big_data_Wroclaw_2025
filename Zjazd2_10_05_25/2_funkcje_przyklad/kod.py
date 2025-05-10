@@ -16,7 +16,7 @@ while True:
             if password_complexity_check(passwd):
                 registration(user, passwd)
             else:
-
+                print('zle haslo')
         else:
             quit()
 
