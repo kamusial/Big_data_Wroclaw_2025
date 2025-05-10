@@ -22,3 +22,5 @@ for i in range(1, len(content)):
 average = total / (len(content)-1)
 print(round(average,2))
 
+# 3. Liczba kobiet na macierzynskim
+
