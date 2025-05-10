@@ -19,5 +19,4 @@ while True:
                 print('zle haslo')
         else:
             quit()
-
 print('Witamy w systemie')
