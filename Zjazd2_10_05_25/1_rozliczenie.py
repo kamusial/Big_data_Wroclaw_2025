@@ -24,3 +24,10 @@ print(round(average,2))
 
 # 3. Liczba kobiet na macierzynskim
 
+total = 0                                              #deklarujemy zmienną
+for i in range (1,len(content)):
+    content[i][4] = content[i][4].replace('\n','')
+    if content[i][3] == 'k' and content[i][4] == 't':
+        total +=1
+print('Liczba kobiet na macierzynskim wynosi ', total)
+print('Koniec czesci 3\n')
