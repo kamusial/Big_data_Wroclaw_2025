@@ -1,7 +1,5 @@
 from funkcje import *
 
-
-
 while True:
     user = input('Podaj uzytkownika: ')
     passwd = input('Podaj haslo: ')
@@ -14,6 +12,12 @@ while True:
     else:
         print('Uzytkownik nie istnieje')
         decission = input('Zarejestrowac? T/N')
+        if decission == 'T':
+            if password_complexity_check(passwd):
+                registration(user, passwd)
+            else:
 
+        else:
+            quit()
 
 print('Witamy w systemie')
