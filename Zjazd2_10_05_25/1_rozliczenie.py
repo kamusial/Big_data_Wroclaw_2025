@@ -12,3 +12,13 @@ for i in range(len(content)):
 print('\n\n\nPo wszystkim')
 print(content)
 print(content[4][1][2])
+
+average = 0
+total = 0
+#2. Obliczenie sredniej wyplaty
+for i in range(1, len(content)):
+    print(content[i][1])
+    total += int(content[i][1])
+average = total / (len(content)-1)
+print(round(average,2))
+
