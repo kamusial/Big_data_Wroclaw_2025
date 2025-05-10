@@ -11,4 +11,4 @@ while True:
     else:
         print('Nie rozpoznano wyboru')
 
-print('koniec programu')
+print('koniec programu.')
