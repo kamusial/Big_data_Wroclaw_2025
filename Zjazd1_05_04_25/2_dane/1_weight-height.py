@@ -33,5 +33,11 @@ print(df)
 
 df.to_csv('waga_wzrost_po_edycji.csv')
 
+from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+model.fit(df[['Height', 'Gender']], df['Weight'])
+print(f'Wspolczynnik kierunkowy: {model.coef_}')
+print(f'wyraz wolny: {model.intercept_}')
 
-
+print(f'waga = wzrost * 1.06960294 + plec * -8.80805024 -102.52081454490131')
+print(model.predict([[192, 0], [192, 1], [160, 1], [100, 1]]))
