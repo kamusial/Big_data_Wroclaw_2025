@@ -18,7 +18,6 @@ plt.hist(df.query("Gender=='Male'").Weight, bins=30)
 # plt.show()
 plt.hist(df.query("Gender=='Female'").Weight, bins=30)
 plt.show()
-
 sns.histplot(df.query("Gender=='Male'").Weight, bins=30)
 # plt.show()
 sns.histplot(df.query("Gender=='Female'").Weight, bins=30)

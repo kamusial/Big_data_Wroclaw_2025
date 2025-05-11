@@ -1,5 +1,11 @@
-print('siema')
+#import time
+from time import sleep
 
-liczby = [1, 3, 5, 5, 4, 3, 7, 6, 3]
-print(len(liczby))
-print(len(set(liczby)))
+print('ok')
+sleep(2)
+print('ok')
+
+
+def log_collect(drive, mode=1, output_file='C:\\logs'):
+
+log_collect('D', output_file=)
