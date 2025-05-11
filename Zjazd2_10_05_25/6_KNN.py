@@ -23,3 +23,20 @@ plt.show()
 sns.scatterplot(data=df, x='petallength', y='petalwidth', hue='class')
 plt.scatter(5.2, 1.45, c='r')
 plt.show()
+
+X = df.iloc[:, :4]
+y = df.class_value
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+model = KNeighborsClassifier()
+model.fit(X_train, y_train)
+print(model.score(X_test, y_test))
+print(pd.DataFrame(confusion_matrix(y_test, model.predict(X_test))))
+
+result = []
+for k in range(1, 101):
+    model = KNeighborsClassifier(k, weights='distance')
+    model.fit(X_train, y_train)
+    result.append(model.score(X_test, y_test))
+plt.plot(range(1, 101), result)
+plt.grid()
+plt.show()
