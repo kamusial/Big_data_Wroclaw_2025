@@ -1,0 +1,3 @@
+Anna;Nowak;Matematyka;89
+Anna;Nowak;Fizyka;69
+Tomasz;Lis;Fizyka;76.6
