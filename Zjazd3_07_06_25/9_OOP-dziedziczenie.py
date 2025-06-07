@@ -23,4 +23,18 @@ class PlatnoscKarta(Platnosc):
         print(f'Platnosc zakonczona.')
 
 class PlatnoscBlik(Platnosc):
-    
+    def __init__(self, kwota, kod_blik):
+        super().__init__(kwota)
+        self.kod_blik = kod_blik
+
+    def wykonaj(self):
+        print(f'Weryfikacja kodu BLIK {self.kod_blik}...')
+        super().wykonaj()
+        print(f'Platnosc blik zakonczona.')
+
+p1 = PlatnoscKarta(120.50, '1234-1234-1234-1234')
+p2 = PlatnoscBlik(80.00, '989898')
+
+p1.wykonaj()
+print()
+p2.wykonaj()
