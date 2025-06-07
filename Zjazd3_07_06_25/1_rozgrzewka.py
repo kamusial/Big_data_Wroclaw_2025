@@ -4,17 +4,28 @@
 # program napisze ładnie nazwe z rozszerzeniem
 # program wykona to dla X plików danych razem
 
-extentions = ['txt', 'csv', 'jpg', 'mp3']
+def extention_correct(ext):
+    if ext in extentions:
+        return True
+    return False
 
+counter_attempt = 0
+extentions = ['txt', 'csv', 'jpg', 'mp3']
 filename = input('Podaj nazwe pliku:  ')
 
 while True:
     extname = input('Podaj rozszerzenie:  ')
-    if extname in extentions:
+    if extention_correct(extname):
         print('Rozszerzenie obslugiwane')
         break
     else:
-        print('Zle rozszerzenie, jeszcze raz')
+        counter_attempt += 1
+        if counter_attempt > 3:
+            print('Zle rozszerzenie 4 razy - przyjmuje txt')
+            extname = 'txt'
+            break
+        print(f'Zle rozszerzenie po raz {counter_attempt}, jeszcze raz')
 
-print('Dalsza czesc programu')
+
+print(f'Plik: {filename}.{extname}')
 

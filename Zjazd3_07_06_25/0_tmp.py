@@ -16,3 +16,8 @@ if nowy_komunikat[-1] != 'a':
 else:
     print('Witam Panią')
 
+
+data = input('Wprowadz nazwy, rozdzielone spacją:  ').split()
+print(data)
+filename = input('Wprowadz nazwe pliku:  ').split('.')
+print(filename)
