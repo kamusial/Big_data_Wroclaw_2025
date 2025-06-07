@@ -9,7 +9,8 @@ class Ksiazka:
         self.wypozyczona = False
 
     def __str__(self):
-        return f'{self.tytul} - {self.autor}'
+        status = 'Wypozyczona' if self.wypozyczona else 'Dostepna'
+        return f'{self.tytul} - {self.autor} ({status})'
 
 
 class Czytelnik:
@@ -40,7 +41,7 @@ class Bilbioteka:
     def pokaz_zasoby(self):
         print('Ksiazki w bibliotece:')
         for k in self.ksiazki:
-            print(k)
+            print(f'- {k}')
 
 biblioteka = Bilbioteka()
 
