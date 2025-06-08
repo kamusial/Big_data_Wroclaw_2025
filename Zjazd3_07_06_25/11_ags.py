@@ -22,16 +22,18 @@ students = [1234, 4352, 6543, 1246, 5986]
 absolwents = [4242, 4352, 6543,1256, 6666, 5555, 4321]
 students_with_debt = [6543, 5986, 4321]
 
-def student_info(index_number):
-    if index_number in students:
-        print(f'Osoba {index_number} studiuje')
-    if index_number in absolwents:
-        print(f'Osoba {index_number} ukonczyla studia')
-    if (index_number in students) or (index_number in absolwents) and \
-            (index_number in students_with_debt):
-        print(f'Osoba {index_number} zalega z kasą')
-    if (index_number not in students) or (index_number not in absolwents) and \
-            (index_number in students_with_debt):
-        print(f'Osoba {index_number} - błąd')
+def student_info(*index_numbers):
+    for index_number in index_numbers:
+        if index_number in students:
+            print(f'Osoba {index_number} studiuje')
+        if index_number in absolwents:
+            print(f'Osoba {index_number} ukonczyla studia')
+        if ((index_number in students) or (index_number in absolwents)) and \
+                (index_number in students_with_debt):
+            print(f'Osoba {index_number} zalega z kasą')
+        if (index_number not in students) and (index_number not in absolwents) and \
+                (index_number in students_with_debt):
+            print(f'Osoba {index_number} - błąd')
 
 student_info(5986)
+student_info(5980)
