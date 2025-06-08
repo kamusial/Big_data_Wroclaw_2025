@@ -12,6 +12,12 @@ zarejestruj_pracownika(imie='Kamil', nazwisko='Kowalski',wiek=32, zawod='syn')
 
 students = {1234: [False, 4.32], 2345: [True, 2.65], 6543: [True, 2.2]}
 
-def show_info(*dane, **parameters):
+def show_info(*data, **parameters):
+    for item in data:
+        if 'dept' in parameters.keys() and parameters['dept'] == True:
+            if students[item][0] == True:
+                print(f'Czlowiek {item} ma dług')
 
 show_info(1234, 2345, dept=True, max_grades=2, failing='all')
+show_info(1234, 2345, max_grades=2, failing='all')
+
