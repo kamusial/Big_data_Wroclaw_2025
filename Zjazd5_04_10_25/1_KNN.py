@@ -24,7 +24,7 @@ sns.scatterplot(data=df, x='petallength', y='petalwidth', hue='class')
 plt.scatter(5.2, 1.45, c='r')
 plt.show()
 
-X = df.iloc[:, :2]
+X = df.iloc[:, :4]
 y = df.class_value
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 model = KNeighborsClassifier(n_neighbors=5, weights='uniform', algorithm='auto', leaf_size=30, p=2, metric='minkowski', metric_params=None, n_jobs=None)
