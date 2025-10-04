@@ -44,7 +44,7 @@ for i in range(k_optymalne):
     print(f'Klaster {i + 1}: {liczba} próbek')
 
 # Kolory dla różnych klastrów:
-kolory = ['red', 'blue', 'green']
+kolory = ['red', 'blue', 'green', 'white', 'black', 'pink', 'yellow', 'orange', 'purple', 'grey']
 
 # rysowanie punktów dla każdego klastra
 for i in range(k_optymalne):
