@@ -3,10 +3,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
+import random
 
 # Określenie zakresu wartości x (od -2π do 2π z krokiem 0.1)
-x = np.arange(-2 * np.pi, 2 * np.pi, 0.1)
-y = np.sin(x)
+x = np.arange(-4 * np.pi, 4 * np.pi, 0.2)
+y = np.array([np.sin(number) * random.uniform(0.7, 1.3) + random.uniform(-0.1, 0.1) for number in x])
 
 # Wykres
 # plt.figure(figsize=(10, 5))
